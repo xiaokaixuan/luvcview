@@ -33,7 +33,7 @@
 #include <SDL/SDL_thread.h>
 #include <SDL/SDL_audio.h>
 #include <SDL/SDL_timer.h>
-#include <linux/videodev.h>
+#include <linux/videodev2.h>
 #include <sys/ioctl.h>
 #include <sys/mman.h>
 #include <errno.h>
@@ -53,8 +53,7 @@
 #define TO_FIXED(X) (((Sint32)(X))<<(FIXED_BITS))
 #define FROM_FIXED(X) (((Sint32)(X))>>(FIXED_BITS))
 
-#define INCPANTILT 64 // 1°
-
+#define INCPANTILT 64 // 1?
 typedef enum action_gui {
 /* 0..7..15 action top */
     A_BRIGHTNESS_UP,
